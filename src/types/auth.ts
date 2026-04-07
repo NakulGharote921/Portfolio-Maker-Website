@@ -7,4 +7,7 @@ export interface Profile {
   created_at?: string
 }
 
+// Empty interface kept for potential future extensions or typing flexibility
+export interface AuthErrorResponse {}
+
 export interface AuthUser extends User {}
