@@ -186,8 +186,6 @@ export async function createPortfolioAsAdmin(input: PortfolioInput) {
 }
 
 async function createPortfolioForUser(input: PortfolioInput, userId: string) {
-  console.log('DEBUG USER ID:', userId)
-
   const { data, error } = await supabase
     .from('portfolios')
     .insert({

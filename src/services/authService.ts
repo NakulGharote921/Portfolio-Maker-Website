@@ -52,13 +52,13 @@ export async function signOutUser() {
 }
 
 export async function getCurrentSession() {
-  const { data, error } = await supabase.auth.getSession()
+  const { data: { session }, error } = await supabase.auth.getSession()
 
   if (error) {
     throw error
   }
 
-  return data.session
+  return session
 }
 
 export function onAuthStateChange(callback: (session: Session | null) => void) {

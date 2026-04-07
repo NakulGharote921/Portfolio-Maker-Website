@@ -44,7 +44,6 @@ export default function AdminLogin() {
       showToast('Admin signed in successfully.', 'success')
       navigate('/dashboard')
     } catch (error) {
-      console.error(error)
       showToast(error instanceof Error ? error.message : 'Unable to sign in.', 'error')
     } finally {
       setLoading(false)
@@ -55,8 +54,7 @@ export default function AdminLogin() {
     try {
       await googleSignIn()
       showToast('Redirecting to Google sign in...', 'success')
-    } catch (error) {
-      console.error(error)
+    } catch {
       showToast('Google sign in failed.', 'error')
     }
   }

@@ -120,11 +120,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         profile,
         loading,
         isAdmin,
-        signUp: async (email: string, password: string) => {
-          await signUpUser(email, password)
+        signUp: async (_email: string, _password: string) => {
+          await signUpUser(_email, _password)
         },
-        signIn: async (email: string, password: string) => {
-          await signInWithPassword(email, password)
+        signIn: async (_email: string, _password: string) => {
+          await signInWithPassword(_email, _password)
         },
         googleSignIn: async () => {
           await signInWithGoogle()

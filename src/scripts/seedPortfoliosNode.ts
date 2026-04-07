@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { samplePortfolios } from '../data/samplePortfolios.js'
 
 async function seed() {

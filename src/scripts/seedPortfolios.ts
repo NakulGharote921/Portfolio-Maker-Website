@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { createPortfolio } from '../services/portfolioService.js'
 import { samplePortfolios } from '../data/samplePortfolios.js'
 
